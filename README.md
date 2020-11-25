@@ -35,7 +35,9 @@ Below is a list of visualizations included in our final project along with the s
 **Line graph of NYC Rental Inventory and COVID-19 Cases**
 
 1.Measure names from rentaliinventory_All should be used as a mark. 
+
 2."SUM(Rental Inventory)" and "SUM(Case Count)" should be dragged into the rows field
+
 3."DAY(RENTAL/Covid Data Single Combined)" should be dragged into the columns field
 
 Calculation 3 filter:
@@ -50,8 +52,10 @@ By setting to true, data for specific locations will show up and not other locat
 **Map of Rental Inventory and COVID-19 cases**
 
 1.Geometry from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” shape file should be set as a mark.
-2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark
-3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)" 2 mark
+
+2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark. This contains COVID-19 data.
+
+3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)" 2 mark. This contains rental inventory data.
 
 Location filter: 
 
