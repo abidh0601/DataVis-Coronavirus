@@ -48,6 +48,7 @@ If the location parameter is equal to ALL it returns all data of neighborhoods a
 By setting to true, data for specific locations will show up and not other locations. Other locations and ALL will return false.
 
 **Map of Rental Inventory and COVID-19 cases**
+
 1.Geometry from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” shape file should be set as a mark.
 2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark
 3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)" 2 mark
