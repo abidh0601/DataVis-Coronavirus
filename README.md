@@ -55,7 +55,11 @@ By setting to true, data for specific locations will show up and not other locat
 
 2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark. This contains COVID-19 data.
 
-3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)" 2 mark. This contains rental inventory data.
+3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)2" mark. This contains rental inventory data.
+
+4."Longitude (generated" should be put in the columns field
+
+5. There should be two "Latitude (generated" tables int the rows field. One should contain COVID-19 data(see 2) and the other should contain rental inventory data (see 3).
 
 Location filter: 
 
