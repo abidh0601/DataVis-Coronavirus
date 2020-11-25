@@ -32,7 +32,7 @@ Below is a list of visualizations included in our final project along with the s
 4.Right click on the "Location Parameter" and click on show parameter to enable the community district selection drop down menu.
 
 
-**Line graph of NYC Rental Inventory and COVID-19 Cases **
+**Line graph of NYC Rental Inventory and COVID-19 Cases**
 
 1.Measure names from rentaliinventory_All should be used as a mark. 
 2."SUM(Rental Inventory)" and "SUM(Case Count)" should be dragged into the rows field
