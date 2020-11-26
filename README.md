@@ -31,48 +31,6 @@ Below is a list of visualizations included in our final project along with the s
 
 4.Right click on the "Location Parameter" and click on show parameter to enable the community district selection drop down menu.
 
-
-**Line graph of NYC Rental Inventory and COVID-19 Cases**
-
-1.Measure names from rentaliinventory_All should be used as a mark. 
-
-2."SUM(Rental Inventory)" and "SUM(Case Count)" should be dragged into the rows field
-
-3."DAY(RENTAL/Covid Data Single Combined)" should be dragged into the columns field
-
-Calculation 3 filter:
-
-IF [Community District (rentalInventory!All)] = [Location Parameter] THEN 'true' ELSEIF  [Location Parameter] = 'All' THEN 'true' END
-
-This filter should be dragged to the filters field and be set to true.
-If the community district from the data is equal to the location on the location parameter it returns true.
-If the location parameter is equal to ALL it returns all data of neighborhoods and covid data on a graph.
-By setting to true, data for specific locations will show up and not other locations. Other locations and ALL will return false.
-
-**Map of Rental Inventory and COVID-19 cases**
-
-1.Geometry from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” shape file should be set as a mark.
-
-2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark. This contains COVID-19 data.
-
-3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)2" mark. This contains rental inventory data.
-
-4."Longitude (generated" should be put in the columns field
-
-5. There should be two "Latitude (generated" tables int the rows field. One should contain COVID-19 data(see 2) and the other should contain rental inventory data (see 3).
-
-Location filter: 
-
-Dragged from tables itself. It shows neighborhood names on the map. 
-Null should be excluded from the filter in order to only show non-null values.
-
-Combined Date Parameter: 
-
-IF  [Count Date]=[Combined Parameter] AND [Rent Date] = [Combined Parameter] THEN [Count Date] END
-
-This parameter should be dragged to the filters field.
-Uses dates from "Combined Parameter", which is made up of dates from the first of every month starting from April and ending in September
-
 **Geometric map showing Median Household Income and COVID-19 cases**
 
 1.Drag "Geometry" from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” file onto the "Detail" of all marks tab.
@@ -137,3 +95,44 @@ Drag "Median Household Income" onto "Filters" field from tables. It shows Median
 Covid Date Parameter:
 
 Go to parameters tab and click on show parameter for Covid Date Parameter to enable a drop down menu to select dates.
+
+**Line graph of NYC Rental Inventory and COVID-19 Cases**
+
+1.Measure names from rentaliinventory_All should be used as a mark. 
+
+2."SUM(Rental Inventory)" and "SUM(Case Count)" should be dragged into the rows field
+
+3."DAY(RENTAL/Covid Data Single Combined)" should be dragged into the columns field
+
+Calculation 3 filter:
+
+IF [Community District (rentalInventory!All)] = [Location Parameter] THEN 'true' ELSEIF  [Location Parameter] = 'All' THEN 'true' END
+
+This filter should be dragged to the filters field and be set to true.
+If the community district from the data is equal to the location on the location parameter it returns true.
+If the location parameter is equal to ALL it returns all data of neighborhoods and covid data on a graph.
+By setting to true, data for specific locations will show up and not other locations. Other locations and ALL will return false.
+
+**Map of Rental Inventory and COVID-19 cases**
+
+1.Geometry from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” shape file should be set as a mark.
+
+2."DAY(Count Date)" should be set as a mark along with SUM(Case Count) under the "Latittude(generated)" mark. This contains COVID-19 data.
+
+3."SUM(Rental Inventory") should be set as a mark along with DAY(Rent Date) under "Latitude(generated)2" mark. This contains rental inventory data.
+
+4."Longitude (generated" should be put in the columns field
+
+5. There should be two "Latitude (generated" tables int the rows field. One should contain COVID-19 data(see 2) and the other should contain rental inventory data (see 3).
+
+Location filter: 
+
+Dragged from tables itself. It shows neighborhood names on the map. 
+Null should be excluded from the filter in order to only show non-null values.
+
+Combined Date Parameter: 
+
+IF  [Count Date]=[Combined Parameter] AND [Rent Date] = [Combined Parameter] THEN [Count Date] END
+
+This parameter should be dragged to the filters field.
+Uses dates from "Combined Parameter", which is made up of dates from the first of every month starting from April and ending in September
