@@ -73,3 +73,67 @@ IF  [Count Date]=[Combined Parameter] AND [Rent Date] = [Combined Parameter] THE
 This parameter should be dragged to the filters field.
 Uses dates from "Combined Parameter", which is made up of dates from the first of every month starting from April and ending in September
 
+**Geometric map showing Median Household Income and COVID-19 cases**
+
+1.Drag "Geometry" from the “geo_export_af59be5b-5d5a-4b31-8c85-062ea3c14f2b.shp” file onto the "Detail" of all marks tab.
+
+2.Drag "SUM(Case Count)" from the "COVID19 Data" file onto the "Detail" of all marks tab.
+
+3.Drag "SUM(Median Household Income)" onto the "Color" mark under the "Latitude(generated)" mark tab. This contains median household income data.
+
+4.Drag "SUM(Median Household Income)" onto the "Detail" mark and drag "SUM(Case Count)" onto the "Color" mark under "Latitude(generated)" 2 mark tab. This contains median household income and case count data.
+
+Location filter:
+
+Drag "Location" onto "Filters" field from tables. It shows neighborhood names on the map.
+Covid Date filter:
+
+IF  [Count Date]=[Covid Date Parameter] THEN [Count Date] END
+
+If the count date is equal to the covid date parameter selected then show data for count date.
+
+Action(Location) filter:
+
+Go to Location under Median-Household-Income tab and click on location. Go to create and then select set and under General tab select "Use All" and apply. This filters what community districts are actionable.
+
+SUM(Case Count) filter:
+
+Drag "Case Count" onto "Filters" field from tables. It shows Case Count on the map. All values should be applied under Special tab.
+
+Covid Date Parameter:
+
+Go to "Parameters" tab and click on "Show Parameter" for "Covid Date Parameter" to enable a drop down menu to select dates.
+
+Location Parameter:
+
+Go to "Parameters" tab and click on "Show parameter" for "Location Parameter" to enable a drop down menu to select community districts.
+
+**Dual-Axis graph of NYC Median Household Income and COVID-19 Cases**
+
+1.Drag "Measure Names" from the "rentalinventory_All" file onto the "Detail" of all marks tab.
+
+2.Drag "SUM(Median Household Income)" onto the "Detail" mark and drag "SUM(Case Count)" onto the "Detail" mark under the "SUM(Median Household Income)" mark tab. This contains median household income and case count data.
+
+3.Drag "SUM(Median Household Income)" onto the "Detail" mark and drag "SUM(Case Count)" onto the "Detail" mark under the "SUM(Case Count)" mark tab. This contains median household income and case count data.
+
+4.Drag "SUM(Median Household Income)" and "SUM(Case Count)" onto the rows field
+
+5.Drag "Location" Onto the columns field
+
+Location filter:
+
+Drag "Location" onto "Filters" field from tables. It shows neighborhood names on the graph.
+
+Covid Date filter:
+
+IF  [Count Date]=[Covid Date Parameter] THEN [Count Date] END
+
+If the count date is equal to the covid date parameter selected then show data for count date.
+
+SUM(Median Household Income) filter:
+
+Drag "Median Household Income" onto "Filters" field from tables. It shows Median Household Income on the graph. Non-null values should be applied under Special tab.
+
+Covid Date Parameter:
+
+Go to parameters tab and click on show parameter for Covid Date Parameter to enable a drop down menu to select dates.
